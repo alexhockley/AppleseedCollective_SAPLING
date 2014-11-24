@@ -26,7 +26,7 @@ function addUser($userArray){
         $responseBody = array("message"=>"Incorrect data","errors"=>$errors);
         return $responseBody;
     }else{
-        $userId = insertUser($userArray);//Function in DBApi.php
+        $userId = insertUserIntoDB($userArray);//Function in DBApi.php
         $reponseBody = getUser($userId);
         return $reponseBody;
     }

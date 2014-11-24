@@ -12,7 +12,7 @@ function doesEmailExist($email){
     return false;
 }
 
-function insertUser($userArray){
+function insertUserIntoDB($userArray){
     $dbConn = connect();
     print("Inserting user into DB\n");
     $userId = 5;
