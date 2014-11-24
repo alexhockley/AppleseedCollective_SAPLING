@@ -25,7 +25,7 @@ else
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation" style="height:10%; background-color:black">
+    <nav id="navbar-header" class="navbar navbar-default" role="navigation" style="height:10%; background-color:black">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="http://localhost/3750/repo/index.php">
@@ -37,10 +37,10 @@ else
                     <li><a class="header-link" href="http://localhost/3750/repo/aboutus.html">About us</a></li>
                     <li><a class="header-link" href="http://localhost/3750/repo/events.php">Events</a></li>
                     <li><a class="header-link" href="http://localhost/3750/repo/contact.php">Contact</a></li>
-                    
+
                 </ul>
             </div>
-            
+
         </div>
     </nav>
 
