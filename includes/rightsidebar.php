@@ -13,7 +13,6 @@
 	<body>
 		<div id="right-side-bar" class="panel panel-default">
 			<div class="panel-body">Upcoming Events</div>
-
 		</div>
 	</body>
 </html>

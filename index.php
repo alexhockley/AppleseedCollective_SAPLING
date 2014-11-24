@@ -1,7 +1,7 @@
 <?php
 include_once('includes/header.php');
 include_once('includes/leftsidebar.php');
-
+include_once('includes/rightsidebar.php');
 ?>
 <html lang="en">
 	<head>
