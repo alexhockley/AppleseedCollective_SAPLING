@@ -6,12 +6,6 @@ include_once('includes/rightsidebar.php');
 ?>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/style.css">
 		<title>
 			About Us
 		</title>
@@ -28,8 +22,6 @@ include_once('includes/rightsidebar.php');
 			<img id="about-us-pic" src="/includes/images/aboutus.jpg" alt="Child Picking Fruit" />
 		</p>
 	</body>
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>
 
 
