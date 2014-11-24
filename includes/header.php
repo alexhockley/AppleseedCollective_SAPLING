@@ -27,6 +27,7 @@ else
 </head>
 <body>
     <nav class="navbar navbar-inverse" role="navigation">   
+    <nav id="navbar-header" class="navbar navbar-default" role="navigation" style="height:10%; background-color:black">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="<?php echo Helpers::BASE_URL_LOCAL?>index.php">
@@ -48,7 +49,7 @@ else
                     
                     
                 </ul>
-            </div>           
+            </div>
         </div>
     </nav>
     
