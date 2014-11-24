@@ -13,8 +13,9 @@ else
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/header.js"></script>
-    <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/css/bootstrap.min.css"></script>
-    <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/css/style.css"></script>
+    
+    <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/css/style.css"></link>
     
     <script type="text/javascript">
         <?php
@@ -27,7 +28,7 @@ else
 </head>
 <body>
     <nav class="navbar navbar-inverse" role="navigation">   
-    <nav id="navbar-header" class="navbar navbar-default" role="navigation" style="height:10%; background-color:black">
+    <div class="navbar-header">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="<?php echo Helpers::BASE_URL_LOCAL?>index.php">
@@ -35,7 +36,7 @@ else
                 </a>
             </div>
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav" style="float:right">
+                <ul class="nav navbar-nav">
                     <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>aboutus.php">About us</a></li>
                     <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>events.php">Events</a></li>
                     <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>contact.php">Contact</a></li>   
@@ -51,6 +52,7 @@ else
                 </ul>
             </div>
         </div>
+    </div>
     </nav>
     
     <div class="modal fade" id="login-modal">
