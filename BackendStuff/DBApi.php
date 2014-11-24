@@ -1,24 +1,45 @@
 <?php
+$username = "appleseed";
+$password = "";
+$hostname = "localhost"; 
+$databaseName = "appleseed_collective";
 
-function connect(){
-    return "";
+//connect to database using mysqli which is requried for prepared statement
+function mysqlLiConnect($hostname, $username, $password,$databaseName){
+    $dbhandle  = mysqli_connect($hostname, $username, $password, $databaseName)
+        or die("Unable to connect to MySQL");
+    return $dbhandle;   //else return dbhanle
+}
+//close connection to database using mysqlLI
+function CloseMysqliDb($dbhandle)
+{
+    mysqli_close($dbhandle);
 }
 
-function close($dbConn){
-    return "";
-}
 
 function doesEmailExist($email){
     return false;
 }
 
-function insertUserIntoDB($userArray){
-    $dbConn = connect();
-    print("Inserting user into DB\n");
-    $userId = 5;
-    close($dbConn);
-    return $userId;
+function insertUser($userArray){
+    $dbhandle = mysqlLiConnect($hostname, $username, $password,$databaseName);
+    if(mysqli_connect_errno($dbhandle)) {   // check if error occurs
+
+        echo "Error on connecting to db.";
+    }
+    else{
+
+        //echo "Succeed.";
+        //do database operations
+        $sql="";
+        
+
+        CCloseMysqliDb($dbhandle);
+        return $userId;
+    }
+    
 }
+
 
 function getUserFromDB($userId){
     print($userId."\n");
