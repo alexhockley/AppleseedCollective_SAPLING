@@ -12,17 +12,15 @@ include_once('includes/leftsidebar.php');
 		<link rel="stylesheet" href="/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/css/style.css">
 		<title>
-			Appleseed Collective
+			About Us
 		</title>
 	</head>
 	<body>
-	Hello world
+	Hello again!
 	</body>
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>
-
-
 
 
 <?php
