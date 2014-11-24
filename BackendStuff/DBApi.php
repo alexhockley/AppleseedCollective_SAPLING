@@ -5,13 +5,13 @@ $hostname = "localhost";
 $databaseName = "appleseed_collective";
 
 //connect to database using mysqli which is requried for prepared statement
-function mysqlLiConnect($hostname, $username, $password,$databaseName){
+function mysqliConnect($hostname, $username, $password,$databaseName){
     $dbhandle  = mysqli_connect($hostname, $username, $password, $databaseName)
         or die("Unable to connect to MySQL");
     return $dbhandle;   //else return dbhanle
 }
 //close connection to database using mysqlLI
-function CloseMysqliDb($dbhandle)
+function closeMysqliDb($dbhandle)
 {
     mysqli_close($dbhandle);
 }
@@ -22,7 +22,7 @@ function doesEmailExist($email){
 }
 
 function insertUser($userArray){
-    $dbhandle = mysqlLiConnect($hostname, $username, $password,$databaseName);
+    $dbhandle = mysqliConnect($hostname, $username, $password,$databaseName);
     if(mysqli_connect_errno($dbhandle)) {   // check if error occurs
 
         echo "Error on connecting to db.";
@@ -32,9 +32,8 @@ function insertUser($userArray){
         //echo "Succeed.";
         //do database operations
         $sql="";
-        
 
-        CCloseMysqliDb($dbhandle);
+        closeMysqliDb($dbhandle);
         return $userId;
     }
     
