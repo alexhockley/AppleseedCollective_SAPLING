@@ -13,9 +13,9 @@
 	// }
 	function insertEvent($eventArray){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		$eventId=0;
 		//prevent sql injection
 		$tempOwnerId =mysql_real_escape_string( $eventArray['event']['owner']['id']);
@@ -54,9 +54,9 @@
 	//insert data to attendee table
 	function insertAttendees($eventArray,$eventId){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		$numAttendees=0;
 		$numAttendees = count($eventArray['event']['attendees'] );
 		if($numAttendees>0){
@@ -94,9 +94,9 @@
 	}
 	function insertTrees($eventArray,$eventId){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		//insert trees table
 		$numTrees=0;
 		$numTrees = count($eventArray['event']['trees'] );
@@ -143,9 +143,9 @@
 
 	function getEvent($eventId){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+		$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		$eventId=0;
 		//prevent sql injection
 		$tempOwnerId =mysql_real_escape_string( $eventId);
@@ -205,9 +205,9 @@
 	// //update event status 
 	function updateEventStatus($eventId,$eventStatus){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+		$databaseName = "appleseed_collective";
 		
 		//prevent sql injection
 		$tempEventId =mysql_real_escape_string( $eventId);
@@ -235,9 +235,9 @@
 
 	function deleteEvent($eventId){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		
 		//prevent sql injection
 		$tempEventId =mysql_real_escape_string( $eventId);
@@ -265,9 +265,9 @@
 	//event operations for user
 	function attendEvent($eventId,$userId){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		
 		//prevent sql injection
 		$tempEventId =mysql_real_escape_string( $eventId);
@@ -295,9 +295,9 @@
 
 	function notAttendEvent($eventId,$userId){
 		$username = "root";
-	    $password = "";
-	    $hostname = "localhost"; 
-	    $databaseName = "appleseed_collective";
+	    	$password = "";
+	    	$hostname = "localhost"; 
+	    	$databaseName = "appleseed_collective";
 		
 		//prevent sql injection
 		$tempEventId =mysql_real_escape_string( $eventId);
