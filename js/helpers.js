@@ -1,6 +1,6 @@
 var GlobalConstants = {
   API_URL_LOCAL: "http://localhost/3750/repo/api/",
-  BASE_URL_LOCAL: "http://localhost/3750/repo/";
+  BASE_URL_LOCAL: "http://localhost/3750/repo/"
 }
 
 
@@ -48,7 +48,7 @@ function hashValue(text){
   var hash = null;
   var hashData = {text : text};
   $.ajax({
-    url: GlobalConstants.API_URL_LOCAL + "/hash/",
+    url: GlobalConstants.API_URL_LOCAL + "hash/",
     data: hashData,
     type: "POST",
     success: function(data){

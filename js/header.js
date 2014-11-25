@@ -23,7 +23,7 @@ function bindHeaderEvents(){
 //bind events related to the login modal
 function bindLoginModalEvents(){
     //on login click
-    $("#modal-login-button").click(function(){
+    $("#modal-login-button").off().click(function(){
         //ajax goes here, or a function which calls the login ajax, depending how we split it up
         //on success hide, on fail display error in modal
         authenticateUser();
@@ -31,14 +31,14 @@ function bindLoginModalEvents(){
     });
 
     //on cancel click
-    $("#modal-cancel-button").click(function(){
+    $("#modal-cancel-button").off().click(function(){
         $("#login-modal input").each(function(){ //go through all the input fields and clear them
             $(this).attr('value',"");
         });
         $("#login-modal").modal('hide');//hide the modal
     });
     //on x click
-    $("#modal-x").click(function(){
+    $("#modal-x").off().click(function(){
         $("#login-modal input").each(function(){ //go through all the input fields and clear them
             $(this).attr('value',"");
         });
@@ -68,7 +68,7 @@ function getLoginData(){
 function authenticateUser(){
   var loginData = getLoginData();
   $.ajax({
-    url: GlobalConstants.API_URL_LOCAL + "/users/authenticate/",
+    url: GlobalConstants.API_URL_LOCAL + "users/authenticate/",
     data: loginData,
     type: "POST",
     statusCode: {
