@@ -50,11 +50,13 @@ else
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>contact.php">Contact Us</a></li>
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>volunteer.php">Volunteer</a></li>
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>staff.php">Staff</a></li>
+            <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>plantowner-farmer.php">Plant Owners/Farmers</a></li>
             <?php
                 if(isset($token))
                     echo "<li>$token</li>";
                 else
-                    echo "<li><button id=\"login-button\">Login</button></li>";
+                    echo "<li id=\"login-button\"><a href=\"#\">Login</a></li>";
+                    // echo "<li><button id=\"login-button\">Login</button></li>";
             ?>
           </ul>
         </div><!-- /.navbar-collapse -->
