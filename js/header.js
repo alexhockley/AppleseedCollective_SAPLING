@@ -26,6 +26,7 @@ function bindLoginModalEvents(){
     $("#modal-login-button").click(function(){
         //ajax goes here, or a function which calls the login ajax, depending how we split it up
         //on success hide, on fail display error in modal
+        authenticateUser();
         alert('log in yo');
     });
 
@@ -46,6 +47,40 @@ function bindLoginModalEvents(){
 }
 
 //refreshes the current page
-function loginSuccess(token){
+function loginSuccess(){
   location.reload();
+}
+
+function getLoginData(){
+  var data = {};
+
+  data.email = $("#login-field").val();
+  data.passwordHash = hashValue($("#password-field").val());
+
+  return data;
+}
+
+function authenticateUser(){
+  var loginData = getLoginData();
+  $.ajax({
+    url: GlobalConstants.API_URL_LOCAL + "/users/authenticate/",
+    data: loginData,
+    type: "POST",
+    statusCode: {
+      200: function(data){
+        var json = $.parseJSON(data);
+        loginSuccess(); // call the success function
+      },
+      401: function(data){
+        var json = $.parseJSON(data);
+        loginErrorMessage(data['message']); // call the success function
+      },
+      403: function(data){
+        var json = $.parseJSON(data);
+        loginErrorMessage(data['message']); // call the success function
+      }
+    },
+    async: false
+  });
+
 }

@@ -5,6 +5,7 @@ include_once('includes/rightsidebar.php');
 ?>
 <html lang="en">
 	<head>
+		<script type="text/javascript" src="<?php Helpers::BASE_URL_LOCAL?>js/events.js"></script>
 		<title>
 			Upcoming Events
 		</title>

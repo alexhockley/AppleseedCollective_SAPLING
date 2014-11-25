@@ -1,6 +1,21 @@
-function buildEventsPage(data){
+/*
+  Events
+
+*/
+
+
+$(document).ready(){
+  //call ajax to get events
+  //on success buildEventsPage();
+  //on fail
+}
+
+/*
+
+*/
+function buildEventsPage(json){
   var eventContainer = $('events-container');
-  for(var event in data){
+  for(var event in json['events']){
     var table = null;
     var elem = null;
     if(event['status'] === "approved"){
@@ -21,7 +36,9 @@ function buildEventsPage(data){
 }
 
 
+/*
 
+*/
 function buildEventTable(month){
   var mTable = $("<table></table>");
   mTable.attr('class','table upcoming-event-date-table');
@@ -35,6 +52,9 @@ function buildEventTable(month){
 
 }
 
+/*
+
+*/
 function buildEventElement(d, loc, t, dur, viewId){
   var row = $('<tr></tr>');
   var day = $('<td></td>');
