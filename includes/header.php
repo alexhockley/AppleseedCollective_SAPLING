@@ -73,6 +73,7 @@ else
                 <div class="modal-body">
                     <input id="login-field" placeholder="Login" type="text">
                     <input id="password-field" placeholder="Password" type="password">
+                    <div id="login-error" hidden></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="modal-login-button" >Login</button>

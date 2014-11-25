@@ -51,6 +51,11 @@ function loginSuccess(){
   location.reload();
 }
 
+function loginError(msg){
+  $("#login-error").html(msg);
+  $("#login-error").show();
+}
+
 function getLoginData(){
   var data = {};
 
@@ -73,14 +78,13 @@ function authenticateUser(){
       },
       401: function(data){
         var json = $.parseJSON(data);
-        loginErrorMessage(data['message']); // call the success function
+        loginError(data['message']); // call the success function
       },
       403: function(data){
         var json = $.parseJSON(data);
-        loginErrorMessage(data['message']); // call the success function
+        loginError(data['message']); // call the success function
       }
     },
     async: false
   });
-
 }
