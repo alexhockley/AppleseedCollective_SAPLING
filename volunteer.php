@@ -36,6 +36,7 @@ include_once('includes/rightsidebar.php');
 			<h2 id="volunteer-menu-signup-event-head"><b>Sign Up for Event</b></h2>
 			<h2 id="volunteer-menu-cancel-event-head"><b>Cancel Event</b></h2>
 			<br /><br />
+			<!-- My Events -->
     		<p id="volunteer-my-event-body" class="paragraph-body">
     			<i>Events that you have volunteered for are listed below</i><br /><br />
 				<table class="table" id="volunteer-my-event-table">
@@ -50,21 +51,40 @@ include_once('includes/rightsidebar.php');
 					</thead>
 					<tbody>
 						<tr>
-							<td>15</td>
+							<td>November 15, 2014</td>
 							<td>45 Smith St., Guelph, ON</td>
 							<td>2:30 pm</td>
 							<td>2 hours</td>
 							<td><a>View Details</a></td>
 						</tr>
 						<tr>
-							<td>22</td>
+							<td>November 22, 2014</td>
 							<td>1 Anders St., Hamilton, ON</td>
 							<td>10:00 am</td>
 							<td>3 hours</td>
 							<td><a>View Details</a></td>
 						</tr>
+					</tbody>
+				</table><br />
+    		</p>
+    		<!-- End of My Events Section -->
+
+    		<!-- Sign up for Event -->
+    		<p id="volunteer-sign-up-event-body" class="paragraph-body">
+    			<i>Events that you can volunteer for are listed below</i><br /><br />
+				<table class="table" id="volunteer-sign-up-event-table">
+					<thead>
 						<tr>
-							<td>22</td>
+							<th>Day</th>
+							<th>Location</th>
+							<th>Time</th>
+							<th>Duration</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>December 17, 2014</td>
 							<td>3484 Lakeshore Rd., Burlington, ON</td>
 							<td>11:00 am</td>
 							<td>1 hour</td>
@@ -73,6 +93,40 @@ include_once('includes/rightsidebar.php');
 					</tbody>
 				</table><br />
     		</p>
+    		<!-- End of Sign up Event -->
+
+    		<!-- Cancel Event -->
+    		<p id="volunteer-cancel-event-body" class="paragraph-body">
+    			<i>To drop out of an event, click 'View Detail', and then 'Delete Event'</i><br /><br />
+				<table class="table" id="volunteer-cancel-event-table">
+					<thead>
+						<tr>
+							<th>Day</th>
+							<th>Location</th>
+							<th>Time</th>
+							<th>Duration</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>November 15, 2014</td>
+							<td>45 Smith St., Guelph, ON</td>
+							<td>2:30 pm</td>
+							<td>2 hours</td>
+							<td><a>View Details</a></td>
+						</tr>
+						<tr>
+							<td>November 22, 2014</td>
+							<td>1 Anders St., Hamilton, ON</td>
+							<td>10:00 am</td>
+							<td>3 hours</td>
+							<td><a>View Details</a></td>
+						</tr>
+					</tbody>
+				</table><br />
+    		</p>
+    		<!-- End of Cancel Event -->
     	</div>
 	</body>
 </html>

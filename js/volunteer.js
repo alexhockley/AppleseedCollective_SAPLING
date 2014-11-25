@@ -10,8 +10,10 @@ function testEvents() {
 	$("#test-view-button").click(function(){
 		$("#not-logged-in-view").hide();
 		$("#logged-in-view").show();
-		$("#volunteer-menu-my-event-head").show();	// Just to ge things started
+		$("#volunteer-menu-my-event-head").show();	// Just to get things started
 		$("#volunteer-my-event-body").show();
+		$("#volunteer-sign-up-event-body").hide();
+		$("#volunteer-cancel-event-body").hide();
 
 	});
 }
@@ -35,6 +37,8 @@ function bindMenuButtons() {
 		$("#volunteer-cancel-event-menu-button").attr("class", "");
 
 		$("#volunteer-my-event-body").show();
+		$("#volunteer-sign-up-event-body").hide();
+		$("#volunteer-cancel-event-body").hide();
 	});
 
 	// Sign Up For Event
@@ -46,7 +50,10 @@ function bindMenuButtons() {
 		$("#volunteer-my-event-menu-button").attr("class", "");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "active");
 		$("#volunteer-cancel-event-menu-button").attr("class", "");
+
 		$("#volunteer-my-event-body").hide();
+		$("#volunteer-sign-up-event-body").show();
+		$("#volunteer-cancel-event-body").hide();
 	});
 
 	$("#volunteer-cancel-event-menu-button").click(function(){
@@ -59,5 +66,7 @@ function bindMenuButtons() {
 		$("#volunteer-cancel-event-menu-button").attr("class", "active");
 
 		$("#volunteer-my-event-body").hide();
+		$("#volunteer-sign-up-event-body").hide();
+		$("#volunteer-cancel-event-body").show();
 	});
 }
