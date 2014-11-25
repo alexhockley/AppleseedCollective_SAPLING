@@ -1,8 +1,13 @@
 <?php
 session_start();
 include_once('helpers.php');
-if(isset($_SESSION['token']))
+if(isset($_SESSION['token'])){
     $token = $_SESSION['token'];
+    if(isset($_SESSION['user_id']))
+      $id = $_SESSION['user_id'];
+    else
+      unset($id);
+}
 else
     unset($token);
 ?>
@@ -21,10 +26,15 @@ else
 
     <script type="text/javascript">
         <?php
-            if(isset($token))
-                echo "var token = $token";
+            if(isset($token)){
+                echo "var token = '$token';";
+                if(isset($id)){
+                  echo "var userId = $id;";
+                  echo "var user = getUser(userId);";
+                }
+            }
             else
-                echo "var token = null";
+                echo "var token = null;";
         ?>
     </script>
 </head>
@@ -54,15 +64,15 @@ else
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>staff.php">Staff</a></li>
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>plantowner-farmer.php">Plant Owners/Farmers</a></li>
             <?php
-                if(isset($token)){
+                if(isset($id)){
                     echo "<li><div class='dropdown'>
                     <button class='btn btn-default dropdown-toggle' type='button' data-toggle='dropdown' aria-expanded='true'>
                     $token
                     <span class='caret'></span>
                     </button>
                     <ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
-                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "settings.php'>Settings</a></li>
-                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "account.php'>Account</a></li>
+                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "settings.php?id=$id'>Settings</a></li>
+                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "account.php?id=$id'>Account</a></li>
                       <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "feedback.php'>Feedback</a></li>
                       <li id='logout-button' role='presentation'><a role='menuitem' tabindex='-1' href=''>Logout</a></li>
                     </ul>

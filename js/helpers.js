@@ -59,3 +59,20 @@ function hashValue(text){
   });
   return hash;
 }
+
+function getUser(id){
+    $.ajax({
+      url: GlobalConstants.API_URL_LOCAL + "user/" + id,
+      data: null,
+      type: "GET",
+      statusCode: {
+        200: function(data){
+          var json = $.parseJSON(data);
+          return json;
+        }
+      },
+      async: false
+
+    });
+
+}
