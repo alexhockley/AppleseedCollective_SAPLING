@@ -44,6 +44,10 @@ function bindLoginModalEvents(){
         });
         $("#login-modal").modal('hide');//hide the modal
     });
+    $("#logout-button").off().click(function(){
+      logoutUser();
+      alert('logout');
+    });
 }
 
 //refreshes the current page
@@ -83,6 +87,21 @@ function authenticateUser(){
       403: function(data){
         var json = $.parseJSON(data);
         loginError(data['message']); // call the success function
+      }
+    },
+    async: false
+  });
+}
+
+function logoutUser(){
+  var loginData = getLoginData();
+  $.ajax({
+    url: GlobalConstants.API_URL_LOCAL + "users/current/logout",
+    data: null,
+    type: "POST",
+    statusCode: {
+      200: function(){
+        console.log('logged out');
       }
     },
     async: false

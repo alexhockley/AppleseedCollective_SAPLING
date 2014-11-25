@@ -6,8 +6,33 @@
 
 $(document).ready(){
   //call ajax to get events
-  //on success buildEventsPage();
-  //on fail
+  $.ajax({
+    url: GlobalConstants.API_URL_LOCAL + "users/events",
+    data: null,
+    type: "GET",
+    contentType: "application/json",
+    statusCode: {
+      200: function(data){
+        var json = $.parseJSON(data);
+        buildEventsPage(json); // call the success function
+      },
+      401: function(data){
+        var json = $.parseJSON(data);
+        fetchEventsError(data['message']); // call the success function
+      },
+      403: function(data){
+        var json = $.parseJSON(data);
+        fetchEventsError(data['message']); // call the success function
+      }
+    },
+    async: false
+  });
+}
+
+function fetchEventsError(msg){
+  
+
+
 }
 
 /*

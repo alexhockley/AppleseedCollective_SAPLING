@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('helpers.php');
 if(isset($_SESSION['token']))
     $token = $_SESSION['token'];
@@ -53,8 +54,21 @@ else
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>staff.php">Staff</a></li>
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>plantowner-farmer.php">Plant Owners/Farmers</a></li>
             <?php
-                if(isset($token))
-                    echo "<li>$token</li>";
+                if(isset($token)){
+                    echo "<li><div class='dropdown'>
+                    <button class='btn btn-default dropdown-toggle' type='button' data-toggle='dropdown' aria-expanded='true'>
+                    $token
+                    <span class='caret'></span>
+                    </button>
+                    <ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
+                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "settings.php'>Settings</a></li>
+                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "account.php'>Account</a></li>
+                      <li role='presentation'><a role='menuitem' tabindex='-1' href='" .Helpers::BASE_URL_LOCAL. "feedback.php'>Feedback</a></li>
+                      <li id='logout-button' role='presentation'><a role='menuitem' tabindex='-1' href=''>Logout</a></li>
+                    </ul>
+                    </div>
+                    </li>";
+                  }
                 else
                     echo "<li id=\"login-button\"><a href=\"#\">Login</a></li>";
                     // echo "<li><button id=\"login-button\">Login</button></li>";
