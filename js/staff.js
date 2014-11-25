@@ -16,6 +16,8 @@ function testEvents() {
 		$("#staff-delete-gleaning-head").hide();
 
 		$("#staff-delete-events-body").hide();
+		$("#staff-create-events-body").hide();
+		$("#create-event-form").hide();
 	});
 }
 
@@ -37,6 +39,8 @@ function bindMenuButtons() {
 
 		$("#staff-pending-events-body").show();
 		$("#staff-delete-events-body").hide();
+		$("#staff-create-events-body").hide();
+		$("#create-event-form").hide();
 	});
 
 	$("#staff-create-gleaning-button").click(function(){
@@ -50,6 +54,8 @@ function bindMenuButtons() {
 
 		$("#staff-pending-events-body").hide();
 		$("#staff-delete-events-body").hide();
+		$("#staff-create-events-body").show();
+		$("#create-event-form").show();
 	});
 
 	$("#staff-delete-gleaning-button").click(function(){
@@ -63,5 +69,7 @@ function bindMenuButtons() {
 
 		$("#staff-pending-events-body").hide();
 		$("#staff-delete-events-body").show();
+		$("#staff-create-events-body").hide();
+		$("#create-event-form").hide();
 	});
 }

@@ -71,6 +71,42 @@ include_once('includes/rightsidebar.php');
     		</p>
     		<!-- End of My Events Section -->
 
+    		<!-- Create Gleaning Event -->
+			<p id="staff-create-events-body" class="paragraph-body">
+				<form id="create-event-form">
+					<label>Gleaning Date:</label>
+					<input id="gleaning-date-input" type="text" class="form-control" placeholder="mm/dd/yyyy">
+					<br /><br />
+
+					<label>Time:</label>
+					<input id="gleaning-time-input" type="text" class="form-control" placeholder="hh/mm (24-hour clock)">
+					<br /><br />
+
+					<label>Duration:</label>
+					<input id="gleaning-duration-input" type="text" class="form-control" placeholder="(In Hours) ex: 2 ">
+					<br /><br />
+
+					<label>Location of Produce:</label><br />
+					<textarea id="gleaning-location-input" type="text" class="form-control">
+					</textarea>
+					<br /><br />
+
+					<label>Produce Information:</label><br />
+					<textarea id="gleaning-produce-info-input" type="text" class="form-control">
+					</textarea>
+					<br /><br />
+
+					<label>Additional Information:</label><br />
+					<textarea id="gleaning-additional-info-input" type="text" class="form-control">
+					</textarea>
+					<br /><br />
+
+					<button id="gleaning-input-submit" type="submit" class="btn btn-success">Submit</button>
+					<button id="gleaning-input-cancel" type="button" class="btn btn-primary">Cancel</button>
+				</form>
+			</p>
+    		<!-- End Gleaning Event -->
+
     		<!-- Delete Event -->
     		<p id="staff-delete-events-body" class="paragraph-body">
     			<i>To delete an event, click 'View Details', and then 'Delete Event'</i><br /><br />

@@ -108,3 +108,33 @@ h5 {
 	padding-left: 50px;
 	display: none;
 }
+
+#gleaning-date-input,
+#gleaning-time-input,
+#gleaning-duration-input,
+#gleaning-location-input,
+#gleaning-produce-info-input,
+#gleaning-additional-info-input {
+	display: inline-block;
+	width: 15%;
+}
+
+#gleaning-input-submit {
+	margin-left: 400px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#gleaning-input-cancel {
+	margin-left:90px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+label {
+	padding-left: 50px;
+}
+
+textarea {
+	margin-left: 50px;
+}
