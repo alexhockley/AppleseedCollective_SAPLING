@@ -93,14 +93,18 @@ h5 {
 	display: none;	/* Want this to be hidden from user when they're not logged in */
 }
 
-#volunteer-menu {
+#volunteer-menu,
+#staff-menu {
 	display: inline-block;
 	padding-left: 50px;
 }
 
 #volunteer-menu-my-event-head,
 #volunteer-menu-signup-event-head,
-#volunteer-menu-cancel-event-head {
+#volunteer-menu-cancel-event-head,
+#staff-pending-events-head,
+#staff-create-gleaning-head,
+#staff-delete-gleaning-head, {
 	padding-left: 50px;
 	display: none;
 }
