@@ -20,7 +20,6 @@ include_once('includes/rightsidebar.php');
             if(!isset($token))
                 echo "<button id=\"staff-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
         ?>
-
 	</body>
 </html>
 

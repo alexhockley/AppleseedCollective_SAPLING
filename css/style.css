@@ -84,3 +84,23 @@ h5 {
 	display: inline-block;
 	margin-left: 300px;
 }
+
+#nav-bar {
+	margin-bottom: 0px;
+}
+
+#logged-in-view {
+	display: none;	/* Want this to be hidden from user when they're not logged in */
+}
+
+#volunteer-menu {
+	display: inline-block;
+	padding-left: 50px;
+}
+
+#volunteer-menu-my-event-head,
+#volunteer-menu-signup-event-head,
+#volunteer-menu-cancel-event-head {
+	padding-left: 200px;
+	display: none;
+}
