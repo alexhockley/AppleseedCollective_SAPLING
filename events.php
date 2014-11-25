@@ -11,10 +11,16 @@ include_once('includes/rightsidebar.php');
 	</head>
 	<body>
 		<h2>Upcoming Events</h2><br />
+
+		<div id="events-container">
+
+		</div>
+
 		<h4>2014 >></h4><br />
-		<h4>Nov</h4><br />
+
 
 		<table class="table" id="upcoming-event-date-table">
+			<h4>Nov</h4><br />
 			<thead>
 				<tr>
 					<th>Day</th>

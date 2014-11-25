@@ -12,6 +12,7 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/helpers.js"></script>
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/header.js"></script>
 
     <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/css/bootstrap.min.css"></link>
