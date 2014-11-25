@@ -1,5 +1,5 @@
 var GlobalConstants = {
-  API_URL:"",
+  API_URL_LOCAL: "http://localhost/3750/repo/api/",
   BASE_URL_LOCAL: "http://localhost/3750/repo/";
 }
 
@@ -9,10 +9,12 @@ function getMonthFromDatetime(datetime){
   var d = new Date(datetime);
   return d.getMonth();
 }
+
 function getDayFromDatetime(datetime){
   var d = new Date(datetime);
   return d.getDate();
 }
+
 function getTime12StrFromDatetime(datetime){
   var d = new Date(datetime);
   var str = "";
@@ -27,19 +29,33 @@ function getTime12StrFromDatetime(datetime){
     hours = 12;
     am = true;
   }
-
   var min = d.getMinutes();
-
   str = hour12.toString() + ":" + min.toString();
   if(am)
     str += " am";
   else
     str += " pm";
-
   return str;
-
 }
+
 function getDurationFromDatetime(start,end){
   var d = new Date(datetime);
   return d.getMonth();
+}
+
+
+function hashValue(text){
+  var hash = null;
+  var hashData = {text : text};
+  $.ajax({
+    url: GlobalConstants.API_URL_LOCAL + "/hash/",
+    data: hashData,
+    type: "POST",
+    success: function(data){
+      var json = $.parseJSON(data);
+      hash = data['hashed'];
+    },
+    async: false
+  });
+  return hash;
 }
