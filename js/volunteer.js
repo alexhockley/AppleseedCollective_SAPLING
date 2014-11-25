@@ -10,7 +10,11 @@ function testEvents() {
 	$("#test-view-button").click(function(){
 		$("#not-logged-in-view").hide();
 		$("#logged-in-view").show();
+
 		$("#volunteer-menu-my-event-head").show();	// Just to get things started
+		$("#volunteer-menu-signup-event-head").hide();
+		$("#volunteer-menu-cancel-event-head").hide();
+
 		$("#volunteer-my-event-body").show();
 		$("#volunteer-sign-up-event-body").hide();
 		$("#volunteer-cancel-event-body").hide();
