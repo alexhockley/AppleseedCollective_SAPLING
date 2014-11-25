@@ -78,7 +78,9 @@ h5 {
 	margin-right: 50px;
 }
 
-#login-button {
+#login-button,
+#volunteer-login-button,
+#staff-login-button {
 	display: inline-block;
 	margin-left: 300px;
 }

@@ -5,6 +5,7 @@ include_once('includes/rightsidebar.php');
 ?>
 <html lang="en">
 	<head>
+		<script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/staff.js"></script>
 		<title>
 			Staff
 		</title>
@@ -15,7 +16,11 @@ include_once('includes/rightsidebar.php');
 		<p class="paragraph-body">
 			View gleaning events, register a gleaning, and cancel events.
 		</p>
-		<button id="login-button" class="btn btn-primary" type="button">Log In</button>
+        <?php
+            if(!isset($token))
+                echo "<button id=\"staff-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
+        ?>
+
 	</body>
 </html>
 

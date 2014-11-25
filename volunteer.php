@@ -5,6 +5,7 @@ include_once('includes/rightsidebar.php');
 ?>
 <html lang="en">
 	<head>
+		<script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/volunteer.js"></script>
 		<title>
 			Volunteer
 		</title>
@@ -16,7 +17,10 @@ include_once('includes/rightsidebar.php');
 			View events you've volunteered for, volunteer for an event, and cancel an
 			event that you've volunteered for.
 		</p>
-		<button id="login-button" class="btn btn-primary" type="button">Log In</button>
+        <?php
+            if(!isset($token))
+                echo "<button id=\"volunteer-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
+        ?>
 	</body>
 </html>
 
