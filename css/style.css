@@ -94,7 +94,8 @@ h5 {
 }
 
 #volunteer-menu,
-#staff-menu {
+#staff-menu,
+#producer-menu {
 	display: inline-block;
 	padding-left: 50px;
 }
