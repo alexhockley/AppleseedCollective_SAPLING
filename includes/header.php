@@ -13,10 +13,10 @@ else
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo Helpers::BASE_URL_LOCAL?>/js/header.js"></script>
-    
+
     <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/bootstrap/dist/css/bootstrap.min.css"></link>
     <link rel="stylesheet" href="<?php echo Helpers::BASE_URL_LOCAL?>/css/style.css"></link>
-    
+
     <script type="text/javascript">
         <?php
             if(isset($token))
@@ -27,34 +27,37 @@ else
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse" role="navigation">   
-    <div class="navbar-header">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="<?php echo Helpers::BASE_URL_LOCAL?>index.php">
-                    Appleseed Collective
-                </a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>aboutus.php">About us</a></li>
-                    <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>events.php">Events</a></li>
-                    <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>contact.php">Contact</a></li>   
-                    
-                    <?php
-                        if(isset($token))
-                            echo "<li>$token</li>";
-                        else
-                            echo "<li><button id=\"login-button\">Login</button></li>";
-                    ?>
-                    
-                    
-                </ul>
-            </div>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo Helpers::BASE_URL_LOCAL?>index.php">
+            Appleseed Collective
+          </a>
         </div>
-    </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>aboutus.php">About</a></li>
+            <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>events.php">Events</a></li>
+            <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>contact.php">Contact Us</a></li>
+            <?php
+                if(isset($token))
+                    echo "<li>$token</li>";
+                else
+                    echo "<li><button id=\"login-button\">Login</button></li>";
+            ?>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
-    
     <div class="modal fade" id="login-modal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -68,7 +71,7 @@ else
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="modal-login-button" >Login</button>
-                    <button type="button" class="btn btn-primary" id="modal-cancel-button" data-dismiss="modal">Cancel</button>  
+                    <button type="button" class="btn btn-primary" id="modal-cancel-button" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>
