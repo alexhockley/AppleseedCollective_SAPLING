@@ -23,7 +23,7 @@ function testEvents() {
 
 function bindLoginEvents() {
 	$("#staff-login-button").click(function(){
-		alert("This works too!");
+		$("#login-modal").modal('show');
 	});
 }
 

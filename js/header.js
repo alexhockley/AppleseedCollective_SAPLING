@@ -16,7 +16,7 @@ function bindHeaderEvents(){
     $("#login-button").click(function(){
         $("#login-modal").modal('show');
     });
-    
+
 
 }
 
@@ -28,7 +28,7 @@ function bindLoginModalEvents(){
         //on success hide, on fail display error in modal
         alert('log in yo');
     });
-    
+
     //on cancel click
     $("#modal-cancel-button").click(function(){
         $("#login-modal input").each(function(){ //go through all the input fields and clear them
@@ -43,5 +43,9 @@ function bindLoginModalEvents(){
         });
         $("#login-modal").modal('hide');//hide the modal
     });
-    
+}
+
+//refreshes the current page
+function loginSuccess(token){
+  location.reload();
 }

@@ -20,7 +20,7 @@ function testEvents() {
 
 function bindLoginEvents() {
 	$("#volunteer-login-button").click(function(){
-		alert("This works!");
+		$("#login-modal").modal('show');
 	});
 }
 
