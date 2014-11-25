@@ -48,6 +48,8 @@ else
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>aboutus.php">About</a></li>
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>events.php">Events</a></li>
             <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>contact.php">Contact Us</a></li>
+            <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>volunteer.php">Volunteer</a></li>
+            <li><a href="<?php echo Helpers::BASE_URL_LOCAL?>staff.php">Staff</a></li>
             <?php
                 if(isset($token))
                     echo "<li>$token</li>";
