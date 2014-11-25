@@ -11,6 +11,8 @@ function testEvents() {
 		$("#not-logged-in-view").hide();
 		$("#logged-in-view").show();
 		$("#volunteer-menu-my-event-head").show();	// Just to ge things started
+		$("#volunteer-my-event-body").show();
+
 	});
 }
 
@@ -31,6 +33,8 @@ function bindMenuButtons() {
 		$("#volunteer-my-event-menu-button").attr("class", "active");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "");
 		$("#volunteer-cancel-event-menu-button").attr("class", "");
+
+		$("#volunteer-my-event-body").show();
 	});
 
 	// Sign Up For Event
@@ -42,6 +46,7 @@ function bindMenuButtons() {
 		$("#volunteer-my-event-menu-button").attr("class", "");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "active");
 		$("#volunteer-cancel-event-menu-button").attr("class", "");
+		$("#volunteer-my-event-body").hide();
 	});
 
 	$("#volunteer-cancel-event-menu-button").click(function(){
@@ -52,5 +57,7 @@ function bindMenuButtons() {
 		$("#volunteer-my-event-menu-button").attr("class", "");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "");
 		$("#volunteer-cancel-event-menu-button").attr("class", "active");
+
+		$("#volunteer-my-event-body").hide();
 	});
 }
