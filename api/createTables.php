@@ -14,7 +14,9 @@
  * UPDATE NOTES: 
  ******************************************************************************/
 
-include 'mysqlLoginInfo.php';
+$servername = "localhost";
+$username = "root";
+$password = "2929przemek";
 $database = 'appleseed_collective';
 $dbConn = mysql_connect($servername, $username,$password); 
 
@@ -104,8 +106,7 @@ $query = "CREATE TABLE `location` (
     FOREIGN KEY (userId) REFERENCES users (id)
     )";
 $result = mysql_query($query);
-$query = "SET FOREIGN_KEY_CHECKS=1";
-$result = mysql_query($query);
+
 
 //create events table
 $query = "DROP TABLE IF EXISTS `events`;";
@@ -170,6 +171,9 @@ $query = "CREATE TABLE `feedback` (
   KEY `FK_feedback_ownerID_idx` (`owner_userID`),
   CONSTRAINT `FK_feedback_ownerID` FOREIGN KEY (`owner_userID`) REFERENCES `users` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 );";
+$result = mysql_query($query);
+
+$query = "SET FOREIGN_KEY_CHECKS=1";
 $result = mysql_query($query);
 
 ?>
