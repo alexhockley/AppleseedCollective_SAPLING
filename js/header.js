@@ -1,33 +1,52 @@
+/*
+  header.js
+  Contains necessary input binding and javascript functionality for the header.
+  Date: Nov 24 2014
+  Authors: Sapling
+  Updated: Alex Hockley
+  Date Updated: Nov 25 2014
+*/
 
-//When document is ready, aka, all elements are finished loading and created
+
 $(document).ready(function(){
     bindInputEvents();
 });
 
 
-//Bind the javascript input events for custom handling
+/* Purpose: Binds the input events for the header and well as the login modal window
+ * Parameters: None
+ * Returns: Nothing
+ */
 function bindInputEvents(){
     bindHeaderEvents();
     bindLoginModalEvents();
 }
 
-//bind events related to the header bar
+/* Purpose: Binds the input events related to the header
+ * Parameters: None
+ * Returns: Nothing
+ */
 function bindHeaderEvents(){
+    //when the login button is pressed
     $("#login-button").click(function(){
         $("#login-modal").modal('show');
     });
 
+    //when the logout button is pressed
+    $("#logout-button").off().click(function(){
+      logoutUser();
+    });
 
 }
 
-//bind events related to the login modal
+/* Purpose: Binds the input events for login modal window
+ * Parameters: None
+ * Returns: Nothing
+ */
 function bindLoginModalEvents(){
     //on login click
     $("#modal-login-button").off().click(function(){
-        //ajax goes here, or a function which calls the login ajax, depending how we split it up
-        //on success hide, on fail display error in modal
         authenticateUser();
-        alert('log in yo');
     });
 
     //on cancel click
@@ -44,22 +63,37 @@ function bindLoginModalEvents(){
         });
         $("#login-modal").modal('hide');//hide the modal
     });
-    $("#logout-button").off().click(function(){
-      logoutUser();
-      alert('logout');
-    });
 }
 
-//refreshes the current page
+/* Purpose: Performs actions after a successful login. Currently only refreshes the page.
+ * Parameters: None
+ * Returns: Nothing
+ */
 function loginSuccess(){
   location.reload();
 }
 
+/* Purpose: Performs actions after a successful logout. Currently only refreshes the page.
+ * Parameters: None
+ * Returns: Nothing
+ */
+function logoutSuccess(){
+  location.reload();
+}
+
+/* Purpose: Displays an error message in the login modal window
+ * Parameters: String msg - The message to display
+ * Returns: Nothing
+ */
 function loginError(msg){
   $("#login-error").html(msg);
   $("#login-error").show();
 }
 
+/* Purpose: Gets the input from the forms of the login modal window
+ * Parameters: None
+ * Returns: An object containing the entered email and a hashed password
+ */
 function getLoginData(){
   var data = {};
 
@@ -69,8 +103,12 @@ function getLoginData(){
   return data;
 }
 
+/* Purpose: Makes an ajax request to authenticate a user. Calls loginSuccess() on success and loginError() on error.
+ * Parameters: None
+ * Returns: Nothing
+ */
 function authenticateUser(){
-  var loginData = getLoginData();
+  var loginData = getLoginData(); //gets the login data from the forms
   $.ajax({
     url: GlobalConstants.API_URL_LOCAL + "users/authenticate/",
     data: loginData,
@@ -82,17 +120,21 @@ function authenticateUser(){
       },
       401: function(data){
         var json = $.parseJSON(data);
-        loginError(data['message']); // call the success function
+        loginError(data['message']); // call the failure function
       },
       403: function(data){
         var json = $.parseJSON(data);
-        loginError(data['message']); // call the success function
+        loginError(data['message']); // call the failure function
       }
     },
     async: false
   });
 }
 
+/* Purpose: Makes an ajax request to log the user out by terminating the session
+ * Parameters: None
+ * Returns: Nothing
+ */
 function logoutUser(){
   var loginData = getLoginData();
   $.ajax({
@@ -101,7 +143,7 @@ function logoutUser(){
     type: "POST",
     statusCode: {
       200: function(){
-        console.log('logged out');
+        logoutSuccess(); //call the success function
       }
     },
     async: false

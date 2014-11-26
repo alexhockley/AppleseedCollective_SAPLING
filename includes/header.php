@@ -1,15 +1,24 @@
 <?php
-session_start();
-include_once('helpers.php');
-if(isset($_SESSION['token'])){
+/*
+  header.php
+  Contains the header for the top of every page in the website.  As this file will be included in every
+  page in the site, it also contains the inclusion of globally needed css, javascript and html code.
+  Date: Nov 24 2014
+  Authors: Sapling
+  Updated: Alex Hockley
+  Date Updated: Nov 25 2014
+*/
+session_start(); //starts the session
+include_once('helpers.php'); //include the helper functions and classes
+if(isset($_SESSION['token'])){ //token is set
     $token = $_SESSION['token'];
-    if(isset($_SESSION['user_id']))
+    if(isset($_SESSION['user_id'])) //user id is set
       $id = $_SESSION['user_id'];
     else
-      unset($id);
+      unset($id); //clear the id, in case its set
 }
 else
-    unset($token);
+    unset($token);//clear the token, in case its set
 ?>
 <html>
 <head>
@@ -26,11 +35,12 @@ else
 
     <script type="text/javascript">
         <?php
+          //transfer the token and id to javascript
             if(isset($token)){
                 echo "var token = '$token';";
                 if(isset($id)){
                   echo "var userId = $id;";
-                  echo "var user = getUser(userId);";
+                  echo "var user = getUser(userId);"; //get the user object for the current user
                 }
             }
             else
@@ -87,6 +97,7 @@ else
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <!-- Modal login window -->
     <div class="modal fade" id="login-modal">
         <div class="modal-dialog">
             <div class="modal-content">
