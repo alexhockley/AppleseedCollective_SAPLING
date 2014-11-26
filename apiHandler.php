@@ -22,6 +22,13 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 $getUserPattern = '/^\/user\/[0-9]+$/';
 
+/*****************************************************************************
+ * Function Name: JSONResponse
+ * Purpose: 
+ * Parameters: $arrayToEncode - Array that is going to be json encoded
+ *             $statusCode - A int containing the status code that should be returned
+ * Returns: Json - A json encoded array with the appropriate status code and header
+ *****************************************************************************/
 function JSONReponse($arrayToEncode, $statusCode){
     header('Content-Type: application/json');
     $responseBody = json_encode($arrayToEncode);
@@ -29,6 +36,13 @@ function JSONReponse($arrayToEncode, $statusCode){
     echo($responseBody);
 }
     
+/*****************************************************************************
+ * Function Name: authenticate
+ * Purpose: Authenticates the user's credentials and sets a session variable
+ * Parameters: $email - A string containing the email of the user
+ *             $passwordHash - A string containing the hashed password
+ * Returns: Nothing
+ *****************************************************************************/
 function authenticate($email, $passwordHash){ 
     $responseBody = logIn($email,$passwordHash);
     if(isset($responseBody['message'])){
@@ -42,10 +56,13 @@ function authenticate($email, $passwordHash){
     }
 }
 
+//The following if and if else statements determine which methods to call for a given url
 if($requestMethod == "GET"){ 
     if(preg_match($getUserPattern,$requestUrl,$match)){
         $userID = substr($requestUrl,6);
         JSONReponse(getUser($userID), 200);
+    }else if($requestUrl = "/events"){
+        
     }
     
 }else if($requestMethod == "PUT"){
