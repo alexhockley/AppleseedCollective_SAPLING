@@ -1,4 +1,17 @@
 <?php
+/******************************************************************************
+ * FILE NAME: eventInfoVerification.php
+ * PURPOSE: Contains the events api for Appleseed Collective
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Tuesday November 25, 2014
+ * CONTACT: 
+ * NOTES: Handles event creation, deletion, retrival , update
+ * UPDATED BY: Przemyslaw Gawron,Jinhai Wang
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: not able to implement due to time constraint
+ ******************************************************************************/
 
 	//field verification
 
