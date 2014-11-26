@@ -6,6 +6,7 @@ $(document).ready(function(){
     bindMenuButtons();
 });
 
+// Button to bypass login process for testing purposes
 function testEvents() {
 	$("#test-view-button").click(function(){
 		$("#not-logged-in-view").hide();
@@ -21,22 +22,28 @@ function testEvents() {
 	});
 }
 
+// Show login modal
 function bindLoginEvents() {
 	$("#staff-login-button").click(function(){
 		$("#login-modal").modal('show');
 	});
 }
 
+// Actions for when one of the Producer buttons are hit.
+// Specifically, create and cancel events, and show events waiting for approval.
 function bindMenuButtons() {
 	$("#staff-pending-events-button").click(function(){
+		// Show correct header
 		$("#staff-pending-events-head").show();
 		$("#staff-create-gleaning-head").hide();
 		$("#staff-delete-gleaning-head").hide();
 
+		// set 'list pending approval events' button to active
 		$("#staff-pending-events-button").attr("class", "active");
 		$("#staff-create-gleaning-button").attr("class", "");
 		$("#staff-delete-gleaning-button").attr("class", "");
 
+		// Show correct body
 		$("#staff-pending-events-body").show();
 		$("#staff-delete-events-body").hide();
 		$("#staff-create-events-body").hide();
@@ -44,14 +51,17 @@ function bindMenuButtons() {
 	});
 
 	$("#staff-create-gleaning-button").click(function(){
+		// Show correct header
 		$("#staff-pending-events-head").hide();
 		$("#staff-create-gleaning-head").show();
 		$("#staff-delete-gleaning-head").hide();
 
+		// set create events button to active
 		$("#staff-pending-events-button").attr("class", "");
 		$("#staff-create-gleaning-button").attr("class", "active");
 		$("#staff-delete-gleaning-button").attr("class", "");
 
+		// Show correct body
 		$("#staff-pending-events-body").hide();
 		$("#staff-delete-events-body").hide();
 		$("#staff-create-events-body").show();
@@ -59,14 +69,17 @@ function bindMenuButtons() {
 	});
 
 	$("#staff-delete-gleaning-button").click(function(){
+		// Show correct header
 		$("#staff-pending-events-head").hide();
 		$("#staff-create-gleaning-head").hide();
 		$("#staff-delete-gleaning-head").show();
 
+		// set delete events button to active
 		$("#staff-pending-events-button").attr("class", "");
 		$("#staff-create-gleaning-button").attr("class", "");
 		$("#staff-delete-gleaning-button").attr("class", "active");
 
+		// Show correct body
 		$("#staff-pending-events-body").hide();
 		$("#staff-delete-events-body").show();
 		$("#staff-create-events-body").hide();

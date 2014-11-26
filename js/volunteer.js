@@ -6,15 +6,18 @@ $(document).ready(function(){
     bindMenuButtons();
 });
 
+// Button to bypass login process for testing purposes
 function testEvents() {
 	$("#test-view-button").click(function(){
 		$("#not-logged-in-view").hide();
 		$("#logged-in-view").show();
 
-		$("#volunteer-menu-my-event-head").show();	// Just to get things started
+		// Show list of events user has volunteered for first
+		$("#volunteer-menu-my-event-head").show();
 		$("#volunteer-menu-signup-event-head").hide();
 		$("#volunteer-menu-cancel-event-head").hide();
 
+		// Show correct body
 		$("#volunteer-my-event-body").show();
 		$("#volunteer-sign-up-event-body").hide();
 		$("#volunteer-cancel-event-body").hide();
@@ -22,6 +25,7 @@ function testEvents() {
 	});
 }
 
+// Show login modal
 function bindLoginEvents() {
 	$("#volunteer-login-button").click(function(){
 		$("#login-modal").modal('show');
@@ -31,15 +35,17 @@ function bindLoginEvents() {
 function bindMenuButtons() {
 	// My Events
 	$("#volunteer-my-event-menu-button").click(function(){
-		// Hide headers
+		// Show correct header
 		$("#volunteer-menu-my-event-head").show();
 		$("#volunteer-menu-signup-event-head").hide();
 		$("#volunteer-menu-cancel-event-head").hide();
+
 		// Set buttons not selected to inactive
 		$("#volunteer-my-event-menu-button").attr("class", "active");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "");
 		$("#volunteer-cancel-event-menu-button").attr("class", "");
 
+		// Show correct body
 		$("#volunteer-my-event-body").show();
 		$("#volunteer-sign-up-event-body").hide();
 		$("#volunteer-cancel-event-body").hide();
@@ -47,28 +53,35 @@ function bindMenuButtons() {
 
 	// Sign Up For Event
 	$("#volunteer-sign-up-event-menu-button").click(function(){
+		// Show correct header
 		$("#volunteer-menu-signup-event-head").show();
 		$("#volunteer-menu-my-event-head").hide();
 		$("#volunteer-menu-cancel-event-head").hide();
 
+		// Set buttons not selected to inactive
 		$("#volunteer-my-event-menu-button").attr("class", "");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "active");
 		$("#volunteer-cancel-event-menu-button").attr("class", "");
 
+		// Show correct body
 		$("#volunteer-my-event-body").hide();
 		$("#volunteer-sign-up-event-body").show();
 		$("#volunteer-cancel-event-body").hide();
 	});
 
+	// Cancel Event
 	$("#volunteer-cancel-event-menu-button").click(function(){
+		// Show correct header
 		$("#volunteer-menu-signup-event-head").hide();
 		$("#volunteer-menu-my-event-head").hide();
 		$("#volunteer-menu-cancel-event-head").show();
 
+		// Set buttons not selected to inactive
 		$("#volunteer-my-event-menu-button").attr("class", "");
 		$("#volunteer-sign-up-event-menu-button").attr("class", "");
 		$("#volunteer-cancel-event-menu-button").attr("class", "active");
 
+		// Show correct body
 		$("#volunteer-my-event-body").hide();
 		$("#volunteer-sign-up-event-body").hide();
 		$("#volunteer-cancel-event-body").show();

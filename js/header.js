@@ -31,7 +31,6 @@ function bindHeaderEvents(){
     $("#login-button").click(function(){
         $("#login-modal").modal('show');
     });
-
     //when the logout button is pressed
     $("#logout-button").off().click(function(){
       logoutUser();

@@ -12,6 +12,7 @@ include_once('includes/rightsidebar.php');
 	</head>
 	<body>
 		<button id="test-view-button" class="btn" type="button">Test view</button>
+		<!-- View to display when user is not logged in -->
 		<div id="not-logged-in-view">
 			<h2>Volunteers</h2>
 			<br /><br />
@@ -24,7 +25,9 @@ include_once('includes/rightsidebar.php');
 	                echo "<button id=\"volunteer-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
 	        ?>
     	</div>
+    	<!-- End view to display when user is not logged in -->
 
+    	<!-- View to display when user is logged in -->
     	<div id="logged-in-view">
     		<ul id="volunteer-menu" class="nav nav-pills">
 		      <li id="volunteer-my-event-menu-button" role="presentation" class="active"><a href="#">My Events</a></li>
@@ -55,14 +58,14 @@ include_once('includes/rightsidebar.php');
 							<td>45 Smith St., Guelph, ON</td>
 							<td>2:30 pm</td>
 							<td>2 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 						<tr>
 							<td>November 22, 2014</td>
 							<td>1 Anders St., Hamilton, ON</td>
 							<td>10:00 am</td>
 							<td>3 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
@@ -88,7 +91,7 @@ include_once('includes/rightsidebar.php');
 							<td>3484 Lakeshore Rd., Burlington, ON</td>
 							<td>11:00 am</td>
 							<td>1 hour</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
@@ -114,20 +117,22 @@ include_once('includes/rightsidebar.php');
 							<td>45 Smith St., Guelph, ON</td>
 							<td>2:30 pm</td>
 							<td>2 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 						<tr>
 							<td>November 22, 2014</td>
 							<td>1 Anders St., Hamilton, ON</td>
 							<td>10:00 am</td>
 							<td>3 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
     		</p>
     		<!-- End of Cancel Event -->
     	</div>
+    	<!-- End view to display when user is logged in -->
+
 	</body>
 </html>
 
