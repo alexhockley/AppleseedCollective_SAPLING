@@ -9,8 +9,8 @@
 */
 class Helpers{
     const BASE_URL="";
-    const BASE_URL_LOCAL="http://localhost/3750/repo/"; //Local URL of the website
+    const BASE_URL_LOCAL=""; //Local URL of the website
     const API_URL= "";
-    const API_URL_LOCAL = "http://localhost/3750/repo/api/"; //Local URL of the API
+    const API_URL_LOCAL = ""; //Local URL of the API
 }
 ?>

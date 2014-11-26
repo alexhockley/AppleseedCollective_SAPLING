@@ -9,8 +9,8 @@
 
 //object containing a couple url constants
 var GlobalConstants = {
-  API_URL_LOCAL: "http://localhost/3750/repo/api/",
-  BASE_URL_LOCAL: "http://localhost/3750/repo/"
+  API_URL_LOCAL: "",
+  BASE_URL_LOCAL: ""
 }
 
 
@@ -84,7 +84,7 @@ function hashValue(text){
     data: hashData,
     type: "POST",
     success: function(data){
-      var json = $.parseJSON(data);
+      //var json = $.parseJSON(data);
       hash = data['hashed'];
     },
     async: false
@@ -101,12 +101,14 @@ function hashValue(text){
 function getUser(id){
     var toReturn = null;
     $.ajax({
-      url: GlobalConstants.API_URL_LOCAL + "user/" + id,
+      url: "/user/" + id,
       data: null,
       type: "GET",
       statusCode: {
         200: function(data){
-          var json = $.parseJSON(data);
+//        var json = JSON.parse(data.responseText);
+          var json = data.responseText;
+//        console.log(json);
           toReturn = json;
         }
       },

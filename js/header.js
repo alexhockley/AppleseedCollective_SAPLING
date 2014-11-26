@@ -97,8 +97,8 @@ function getLoginData(){
   var data = {};
 
   data.email = $("#login-field").val();
-  data.passwordHash = hashValue($("#password-field").val());
-
+  //data.passwordHash = hashValue($("#password-field").val());
+  data.passwordHash = $("#password-field").val();
   return data;
 }
 
@@ -107,23 +107,25 @@ function getLoginData(){
  * Returns: Nothing
  */
 function authenticateUser(){
-  var loginData = getLoginData(); //gets the login data from the forms
+  var loginData = getLoginData(); //gets the login data from the forms\
   $.ajax({
-    url: GlobalConstants.API_URL_LOCAL + "users/authenticate/",
+    url: "/users/authenticate",
     data: loginData,
     type: "POST",
     statusCode: {
       200: function(data){
-        var json = $.parseJSON(data);
+        //var json = $.parseJSON(data);
+        //var json = JSON.parse(data);
         loginSuccess(); // call the success function
       },
       401: function(data){
-        var json = $.parseJSON(data);
+        //var json = $.parseJSON(data);
+        v//ar json = JSON.parse(data);
         loginError(data['message']); // call the failure function
       },
       403: function(data){
-        var json = $.parseJSON(data);
-        loginError(data['message']); // call the failure function
+        var json = $.parseJSON(data.responseText);
+        loginError(json['message']); // call the failure function
       }
     },
     async: false
@@ -137,7 +139,7 @@ function authenticateUser(){
 function logoutUser(){
   var loginData = getLoginData();
   $.ajax({
-    url: GlobalConstants.API_URL_LOCAL + "users/current/logout",
+    url: "/users/current/logout",
     data: null,
     type: "POST",
     statusCode: {
