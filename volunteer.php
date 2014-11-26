@@ -58,14 +58,14 @@ include_once('includes/rightsidebar.php');
 							<td>45 Smith St., Guelph, ON</td>
 							<td>2:30 pm</td>
 							<td>2 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 						<tr>
 							<td>November 22, 2014</td>
 							<td>1 Anders St., Hamilton, ON</td>
 							<td>10:00 am</td>
 							<td>3 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
@@ -91,7 +91,7 @@ include_once('includes/rightsidebar.php');
 							<td>3484 Lakeshore Rd., Burlington, ON</td>
 							<td>11:00 am</td>
 							<td>1 hour</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
@@ -117,14 +117,14 @@ include_once('includes/rightsidebar.php');
 							<td>45 Smith St., Guelph, ON</td>
 							<td>2:30 pm</td>
 							<td>2 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 						<tr>
 							<td>November 22, 2014</td>
 							<td>1 Anders St., Hamilton, ON</td>
 							<td>10:00 am</td>
 							<td>3 hours</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />

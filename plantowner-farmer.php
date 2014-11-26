@@ -63,7 +63,7 @@ include_once('includes/rightsidebar.php');
 							<td>2:00 pm</td>
 							<td>2 hours</td>
 							<td>Approved</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 						<tr>
 							<td>November 22, 2014</td>
@@ -71,7 +71,7 @@ include_once('includes/rightsidebar.php');
 							<td>11:30 am</td>
 							<td>3 hours</td>
 							<td>Pending</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
@@ -137,7 +137,7 @@ include_once('includes/rightsidebar.php');
 							<td>2:00 pm</td>
 							<td>2 hours</td>
 							<td>Approved</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 						<tr>
 							<td>November 22, 2014</td>
@@ -145,7 +145,7 @@ include_once('includes/rightsidebar.php');
 							<td>11:30 am</td>
 							<td>3 hours</td>
 							<td>Pending</td>
-							<td><a>View Details</a></td>
+							<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 						</tr>
 					</tbody>
 				</table><br />
