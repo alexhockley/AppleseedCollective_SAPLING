@@ -12,6 +12,8 @@ include_once('includes/rightsidebar.php');
 	</head>
 	<body>
 		<button id="test-view-button" class="btn" type="button">Test view</button><br />
+
+		<!-- View to display when user not logged in -->
 		<div id="not-logged-in-view">
 			<h2>Staff Members</h2>
 			<br /><br />
@@ -23,7 +25,9 @@ include_once('includes/rightsidebar.php');
 	                echo "<button id=\"staff-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
 	        ?>
     	</div>
+    	<!-- End view to display when user not logged in -->
 
+    	<!-- View to display when user is logged in -->
     	<div id="logged-in-view">
     		<ul id="staff-menu" class="nav nav-pills">
 		      <li id="staff-pending-events-button" role="presentation" class="active"><a href="#">Events Pending Approval</a></li>
@@ -147,6 +151,7 @@ include_once('includes/rightsidebar.php');
 			</p>
     		<!-- End of Delete Event -->
     	</div>
+    	<!-- End view to display when user is logged in -->
 	</body>
 </html>
 

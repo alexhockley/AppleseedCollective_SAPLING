@@ -13,8 +13,14 @@ if(isset($_GET['id']))
   <script type="text/javascript">
     var id = <?php echo $id?>;
   </script>
+  <title>
+  	Event Details
+  </title>
 </head>
-
+<body>
+	<h2>Events Details</h2><br />
+	Coming soon...
+</body>
 
 
 <?php

@@ -12,9 +12,10 @@ include_once('includes/rightsidebar.php');
 	</head>
 	<body>
 		<button id="test-view-button" class="btn" type="button">Test view</button><br />
-<!-- 			 Using the staff code because it's basically the same at this point
-			 in terms of user-facing things
- -->
+		<!-- Using the staff code because it's basically the same at this point
+			 in terms of user-facing things -->
+
+ 		<!-- View to display when user is not logged in -->
 		<div id="not-logged-in-view">
 			<h2>Plant Owners and Farmers</h2>
 			<br /><br />
@@ -26,7 +27,9 @@ include_once('includes/rightsidebar.php');
 	                echo "<button id=\"staff-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
 	        ?>
     	</div>
+    	<!-- End view to display when user is not logged in -->
 
+    	<!-- View to display when user is logged in -->
 		<div id="logged-in-view">
     		<ul id="producer-menu" class="nav nav-pills">
 		      <li id="producer-pending-events-button" role="presentation" class="active"><a href="#">My Gleaning Events</a></li>
@@ -150,6 +153,7 @@ include_once('includes/rightsidebar.php');
     		<!-- End of Cancel Gleaning -->
 
 		</div>
+    	<!-- End view to display when user is logged in -->
 	</body>
 </html>
 

@@ -12,6 +12,7 @@ include_once('includes/rightsidebar.php');
 	</head>
 	<body>
 		<button id="test-view-button" class="btn" type="button">Test view</button>
+		<!-- View to display when user is not logged in -->
 		<div id="not-logged-in-view">
 			<h2>Volunteers</h2>
 			<br /><br />
@@ -24,7 +25,9 @@ include_once('includes/rightsidebar.php');
 	                echo "<button id=\"volunteer-login-button\" class=\"btn btn-primary\" type=\"button\">Log In</button></li>";
 	        ?>
     	</div>
+    	<!-- End view to display when user is not logged in -->
 
+    	<!-- View to display when user is logged in -->
     	<div id="logged-in-view">
     		<ul id="volunteer-menu" class="nav nav-pills">
 		      <li id="volunteer-my-event-menu-button" role="presentation" class="active"><a href="#">My Events</a></li>
@@ -128,6 +131,8 @@ include_once('includes/rightsidebar.php');
     		</p>
     		<!-- End of Cancel Event -->
     	</div>
+    	<!-- End view to display when user is logged in -->
+
 	</body>
 </html>
 

@@ -16,8 +16,6 @@ function bindHeaderEvents(){
     $("#login-button").click(function(){
         $("#login-modal").modal('show');
     });
-
-
 }
 
 //bind events related to the login modal

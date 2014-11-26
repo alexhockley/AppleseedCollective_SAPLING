@@ -19,7 +19,7 @@ include_once('includes/rightsidebar.php');
 
 		<h4>2014 >></h4><br />
 
-
+		<!-- List upcoming events in a month -->
 		<table class="table" id="upcoming-event-date-table">
 			<h4>Nov</h4><br />
 			<thead>
@@ -37,24 +37,25 @@ include_once('includes/rightsidebar.php');
 					<td>45 Smith St., Guelph, ON</td>
 					<td>2:30 pm</td>
 					<td>2 hours</td>
-					<td><a>View Details</a></td>
+					<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 				</tr>
 				<tr>
 					<td>22</td>
 					<td>1 Anders St., Hamilton, ON</td>
 					<td>10:00 am</td>
 					<td>3 hours</td>
-					<td><a>View Details</a></td>
+					<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 				</tr>
 				<tr>
 					<td>22</td>
 					<td>3484 Lakeshore Rd., Burlington, ON</td>
 					<td>11:00 am</td>
 					<td>1 hour</td>
-					<td><a>View Details</a></td>
+					<td><a href="<?php echo Helpers::BASE_URL_LOCAL?>eventdetails.php">View Details</a></td>
 				</tr>
 			</tbody>
 		</table><br />
+		<!-- End list of upcoming events -->
 
 		<h4>May</h4><br />
 		<div id="info-box" class="alert alert-info" role="feedback-info-box">
