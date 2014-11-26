@@ -14,7 +14,7 @@
  * UPDATE NOTES: not fully implemented due to time constraint
  ******************************************************************************/
 	require 'eventInfoVerification.php';
-	require 'eventApi.php'
+	require 'eventApi.php';
 	include 'DBApi.php';
 	
 
@@ -23,7 +23,7 @@
  *****************************************************************************/
 function connectDB(){
 	$username = "root";
-	$password = "";
+	$password = "2929przemek";
 	$hostname = "localhost"; 
 	$databaseName = "appleseed_collective";
 	$dbhandle = mysqliConnect($hostname, $username, $password,$databaseName);
