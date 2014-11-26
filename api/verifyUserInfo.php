@@ -1,6 +1,25 @@
 <?php
-//Correct to assume that the specific keys will be included in the json?
+/******************************************************************************
+ * FILE NAME: verifyUserInfo.php
+ * PURPOSE: Contains function for verifying input data
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Tuesday November 25, 2014
+ * CONTACT: 
+ * NOTES: 
+ * UPDATED BY: Przemyslaw Gawron,Jinhai Wang
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
 
+/*****************************************************************************
+ * Function Name: verifyFirstName
+ * Purpose: verify first name
+ * Parameters: $firstName - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyFirstName($firstName){
     if($firstName == "" || !(isset($firstName))){
         return "First name not included";
@@ -9,6 +28,13 @@ function verifyFirstName($firstName){
     }
 }
 
+/*****************************************************************************
+ * Function Name: verifyLastName
+ * Purpose: verify last name
+ * Parameters: $lastName - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyLastName($lastName){
     if($lastName == "" || !(isset($lastName))){
         return "Last name not included";
@@ -16,7 +42,14 @@ function verifyLastName($lastName){
         return "";
     }
 }
-//Check if unique
+
+/*****************************************************************************
+ * Function Name: verifyEmail
+ * Purpose: check if email is unique
+ * Parameters: $email - string
+ *            
+ * Returns:  nothing or an error messages
+ *****************************************************************************/
 function verifyEmail($email){
     if($email == "" || !(isset($email))){
         return "Email not included";
@@ -27,6 +60,13 @@ function verifyEmail($email){
     }
 }
 
+/*****************************************************************************
+ * Function Name: verifyRoles
+ * Purpose: check if $roles empty
+ * Parameters: $rolesArray - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyRoles($rolesArray){
     $listOfRoles = array("Staff","Normal"); //Add other roles if needed
     
@@ -44,11 +84,25 @@ function verifyRoles($rolesArray){
     return "";
 }
 
+/*****************************************************************************
+ * Function Name: countPhoneNumberDigits
+ * Purpose: count number of digits
+ * Parameters: $rolesArray - string
+ *            
+ * Returns: length of digits
+ *****************************************************************************/
 function countPhoneNumberDigits($phoneNumber){
     return(strlen((string)$phoneNumber));
 }
 
-// number can't be larger than 16? and less than 7?
+
+/*****************************************************************************
+ * Function Name: verifyPhoneNumber
+ * Purpose: verify if phone number is valid
+ * Parameters: $phoneNumber - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyPhoneNumber($phoneNumber){
     $maxLength = 10;
     $minLength = 10;
@@ -66,18 +120,30 @@ function verifyPhoneNumber($phoneNumber){
         return "";
     }
 }
-//    !(isset($userNotes))
-//Talk to group about this
+
+/*****************************************************************************
+ * Function Name: verifyLocations
+ * Purpose: verify if location is not empty
+ * Parameters: $locationsArray - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyLocations($locationsArray){
-//    print_r($locationsArray);
 
     if(count($locationsArray) == 0){
-        return "";
+        return "Location can't be empty.";
     }
     
     return "";
 }
 
+/*****************************************************************************
+ * Function Name: verifyUserNotes
+ * Purpose: verify if location is defined
+ * Parameters: $userNotes - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyUserNotes($userNotes){
     if(!(isset($userNotes))){
         return "User notes cannot be undefined. Default is \"\"";
@@ -86,6 +152,13 @@ function verifyUserNotes($userNotes){
     }
 }
 
+/*****************************************************************************
+ * Function Name: verifyCompany
+ * Purpose: verify if company is defined
+ * Parameters: $company - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyCompany($company){
     if(!(isset($company))){
         return "Company cannot be undefined. Default is \"\"";
@@ -94,6 +167,13 @@ function verifyCompany($company){
     }
 }
 
+/*****************************************************************************
+ * Function Name: verifyEmailEnabled
+ * Purpose: verify if email notification option is set
+ * Parameters: $emailEnabled - boolean
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyEmailEnabled($emailEnabled){
     if($emailEnabled === false || $emailEnabled === true || $emailEnabled === "false" || $emailEnabled === "true"){
         return "";
@@ -102,6 +182,13 @@ function verifyEmailEnabled($emailEnabled){
     }
 }
 
+/*****************************************************************************
+ * Function Name: verifyPassword
+ * Purpose: verify if password not empty or null
+ * Parameters: $password - string
+ *            
+ * Returns: nothing or an error messages
+ *****************************************************************************/
 function verifyPassword($password){
     if($password == "" || !(isset($password))){
         return "Password not included";
@@ -110,6 +197,13 @@ function verifyPassword($password){
     }
 }
 
+/*****************************************************************************
+ * Function Name: verifyUserInfo
+ * Purpose: verify if user input data for creating user or updating user is valid
+ * Parameters: $userArray - array
+ *            
+ * Returns: nothing or set of  error messages indicating errors
+ *****************************************************************************/
 function verifyUserInfo($userArray){
     $returnErrorsToCaller = array();
     $errors = array();
