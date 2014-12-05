@@ -1,13 +1,18 @@
 <?php
-/*
-  header.php
-  Contains the header for the top of every page in the website.  As this file will be included in every
-  page in the site, it also contains the inclusion of globally needed css, javascript and html code.
-  Date: Nov 24 2014
-  Authors: Sapling
-  Updated: Alex Hockley
-  Date Updated: Nov 25 2014
-*/
+/******************************************************************************
+ * FILE NAME: header.php
+ * PURPOSE: Contains the header for the top of every page in the website.  
+ *          As this file will be included in every
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Thursay November 24, 2014
+ * CONTACT: 
+ * UPDATED BY: Alex Hockley
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
+
 session_start(); //starts the session
 include_once('helpers.php'); //include the helper functions and classes
 if(isset($_SESSION['token'])){ //token is set

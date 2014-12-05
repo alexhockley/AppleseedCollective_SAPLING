@@ -1,4 +1,17 @@
 <?php
+/******************************************************************************
+ * FILE NAME: aboutus.php
+ * PURPOSE: Contains the html code related to the about page
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Thursay November 21, 2014
+ * CONTACT: 
+ * UPDATED BY: Erica Pisani-Konert
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
+
 include_once('includes/header.php');
 include_once('includes/leftsidebar.php');
 include_once('includes/rightsidebar.php');

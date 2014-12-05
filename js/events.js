@@ -1,11 +1,17 @@
-/*
-  events.js
-  This javascript is responsible for building the events page using data stored in the database
-  Date: Nov 25 2014
-  Authors: Sapling
-  Updated: Alex Hockley
-  Date Updated: Nov 25 2014
-*/
+/******************************************************************************
+ * FILE NAME: events.js
+ * PURPOSE: This javascript is responsible for building the events 
+ *          page using data stored in the database
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Thursay November 25, 2014
+ * CONTACT: 
+ * UPDATED BY: Alex Hockley
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
+
 
 
 $(document).ready(function(){

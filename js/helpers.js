@@ -1,11 +1,15 @@
-/*
-  helpers.js
-  Contains useful constants and functions to be used globally across the site
-  Date: Nov 24 2014
-  Authors: Sapling
-  Updated: Alex Hockley
-  Date Updated: Nov 25 2014
-*/
+/******************************************************************************
+ * FILE NAME: helpers.js
+ * PURPOSE: Contains useful constants and functions to be used globally across the site 
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Thursay November 25, 2014
+ * CONTACT: 
+ * UPDATED BY: Alex Hockley
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
 
 //object containing a couple url constants
 var GlobalConstants = {

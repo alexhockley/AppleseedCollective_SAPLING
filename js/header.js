@@ -1,11 +1,15 @@
-/*
-  header.js
-  Contains necessary input binding and javascript functionality for the header.
-  Date: Nov 24 2014
-  Authors: Sapling
-  Updated: Alex Hockley
-  Date Updated: Nov 25 2014
-*/
+/******************************************************************************
+ * FILE NAME: headers.js
+ * PURPOSE: Contains necessary input binding and javascript functionality for the header. 
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Thursay November 25, 2014
+ * CONTACT: 
+ * UPDATED BY: Alex Hockley
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
 
 
 $(document).ready(function(){

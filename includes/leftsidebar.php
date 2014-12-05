@@ -1,4 +1,18 @@
 <html>
+<?php
+/******************************************************************************
+ * FILE NAME: leftsidebar.php
+ * PURPOSE: Contains the code the left side bar of the website
+ * AUTHOR(S): Przemyslaw Gawron, Alex Hockley, Erica Pisani-Konert, 
+ *            Jinhai Wang, Rhys Hall
+ * GROUP NAME: Sapling
+ * CREATED: Thursay November 24, 2014
+ * CONTACT: 
+ * UPDATED BY: Alex Hockley
+ * LAST UPDATED: Tuesday November 25, 2014
+ * UPDATE NOTES: 
+ ******************************************************************************/
+?>
 	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
