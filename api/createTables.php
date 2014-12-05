@@ -14,9 +14,9 @@
  * UPDATE NOTES: 
  ******************************************************************************/
 
-$servername = "localhost";
-$username = "root";
-$password = "2929przemek";
+$servername = "";
+$username = "";
+$password = "";
 $database = 'appleseed_collective';
 $dbConn = mysql_connect($servername, $username,$password); 
 

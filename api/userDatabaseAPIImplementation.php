@@ -19,7 +19,9 @@ include 'userDatabaseAPI.php';
  * Note: Description in userDatabaseAPI.php
  *****************************************************************************/
 function connectToDB(){
-    $connection = new PDO('mysql:host=127.0.0.1;dbname=appleseed_collective', 'root', '2929przemek');
+    $username = "";
+    $password = "";
+    $connection = new PDO('mysql:host=127.0.0.1;dbname=appleseed_collective', $username, $password);
     return $connection;
 }
 

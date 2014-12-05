@@ -62,7 +62,7 @@ if($requestMethod == "GET"){
         $userID = substr($requestUrl,6);
         JSONReponse(getUser($userID), 200);
     }else if($requestUrl = "/events"){
-        
+        JSONResponse(array("message"=>"Not implemented"),401);
     }
     
 }else if($requestMethod == "PUT"){

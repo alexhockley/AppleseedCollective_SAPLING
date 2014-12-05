@@ -8,30 +8,30 @@
 */
 
 
-$(document).ready(){
+$(document).ready(function(){
   //call ajax to get events
   $.ajax({
-    url: GlobalConstants.API_URL_LOCAL + "users/events",
+    url: "/events",
     data: null,
     type: "GET",
     contentType: "application/json",
     statusCode: {
       200: function(data){
-        var json = $.parseJSON(data);
-        buildEventsPage(json); // call the success function
+//        var json = JSON.parse(data.responseText);
+        buildEventsPage(data); // call the success function
       },
       401: function(data){
-        var json = $.parseJSON(data);
-        fetchEventsError(data['message']); // call the failure function
+        var json = JSON.parse(data.responseText);
+        fetchEventsError(json['message']); // call the failure function
       },
       403: function(data){
-        var json = $.parseJSON(data);
+        var json = JSON.parse(data.responseText);
         fetchEventsError(data['message']); // call the failure function
       }
     },
     async: false
   });
-}
+});
 
 /* TODO
  * Purpose: Displays an error when the events fetching fails

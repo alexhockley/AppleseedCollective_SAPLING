@@ -11,7 +11,7 @@ include_once('includes/rightsidebar.php');
 		</title>
 	</head>
 	<body>
-	Hello world
+            <h2>Hello world</h2>
 	</body>
 </html>
 

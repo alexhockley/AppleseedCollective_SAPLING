@@ -13,27 +13,45 @@
  * UPDATE NOTES: not able to implement due to time constraint
  ******************************************************************************/
 
-	//field verification
+/*****************************************************************************
+ * Function Name: verifyOwnerID
+ * Purpose: 
+ * Parameters: 
+ * Returns: 
+ *****************************************************************************/
+function verifyOwnerId(){
 
-	//check if ownerid is null or empty
-	function verifyOwnerId(){
+}
 
-	}
+/*****************************************************************************
+ * Function Name: verifyDescription
+ * Purpose: 
+ * Parameters: 
+ * Returns: 
+ *****************************************************************************/
+function verifyDescription(){
 
-	//check if event description missing
-	function verifyDescription(){
+}
 
-	}
+/*****************************************************************************
+ * Function Name: verifyDateTime
+ * Purpose: 
+ * Parameters: 
+ * Returns: 
+ *****************************************************************************/
+function verifyDateTime(){
 
-	//check if endTime is logically correct and in correct formate
-	function verifyDateTime(){
+}
 
-	}
+/*****************************************************************************
+ * Function Name: verifyEndTime
+ * Purpose: 
+ * Parameters: 
+ * Returns: 
+ *****************************************************************************/
+function verifyEndTime(){
 
-	//check if endTime is logically correct and in correct formate
-	function verifyEndTime(){
-
-	}
+}
 
 
 ?>

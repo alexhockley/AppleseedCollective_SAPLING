@@ -22,8 +22,8 @@
  * Note: create database connection
  *****************************************************************************/
 function connectDB(){
-	$username = "root";
-	$password = "2929przemek";
+	$username = "";
+	$password = "";
 	$hostname = "localhost"; 
 	$databaseName = "appleseed_collective";
 	$dbhandle = mysqliConnect($hostname, $username, $password,$databaseName);
